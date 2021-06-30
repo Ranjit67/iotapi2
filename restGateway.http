@@ -1,0 +1,43 @@
+### insert Getway
+post http://localhost:4000/gateways/create
+Content-Type: application/json
+
+{
+    "bleID":"jnnth",
+     "gatewayID":"haraPriya",
+     "connectionString":"fjdkfjdlkgjfkldj"
+}
+
+### find all gateway
+GET http://localhost:4000/gateways
+Content-Type: application/json
+
+### get gateway through gateway mac id
+GET http://localhost:4000/gateways/f6h.s555657623210ds
+Content-Type: application/json
+
+### get sensors through gatway macid
+POST http://localhost:4000/gateways/check/gatewaySensor
+Content-Type: application/json
+
+{
+    "gatewayMacId":"Gatewayid"
+}
+
+### find all active device
+GET http://localhost:4000/gateways/active
+
+### delete gateway remove sensor
+DELETE http://localhost:4000/gateways/delete
+Content-Type: application/json
+
+{
+    "gatewayMacId":"67436574gfhdgfTesting2"
+}
+### find all gatewy under company through company uid 
+POST http://localhost:4000/gateways/gatewayFindCompany
+Content-Type: application/json
+
+{
+    "uid":"ranjit@519@7"
+}

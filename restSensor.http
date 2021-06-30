@@ -1,0 +1,79 @@
+### company insert
+post http://localhost:4000/sensors/create
+Content-Type: application/json
+
+{
+      "IecStandard":"mmmmmm23404956",
+      "frameSize":"resta",
+      "macID":"mmmmmm23404956",
+      "machineType":"machinary",
+      "maxVibration":"maxVariable",
+      "powerConsumption":"power consumer",
+      "powerFactor":"power factor",
+      "ratedCurrent":"rated current",
+      "sensorName":"mmmmmm23404956",
+      "speed":"ght56",
+      "typeOfBearing":"bariar",
+      "voltage":"10vlt",
+      "frequency":"frequence data"
+}
+
+### find all sensor
+GET http://localhost:4000/sensors
+Content-Type: application/json
+
+### get sensors through sensor mac id
+GET http://localhost:4000/sensors/5712376jhdfhdj
+Content-Type: application/json
+
+### find exited field
+GET http://localhost:4000/sensors/exitDevice
+Content-Type: application/json
+
+
+
+### find device list of company 
+POST http://localhost:4000/sensors/companyExitedDevice
+Content-Type: application/json
+
+{
+    "companyUid":"ranjit@519@71"
+}
+
+### sensor delete updated in company
+POST http://localhost:4000/sensors/delete
+Content-Type: application/json
+
+{
+      "sensorMacId":"5712376jhdfhdjranjit2"
+}
+
+
+### findSensor through company
+POST http://localhost:4000/sensors/sensorCompany
+Content-Type: application/json
+
+{
+      "uid":"qLmR65jVGqTKURMVeWdZDGBhbnr1"
+}
+
+
+### threshold update
+PUT http://localhost:4000/sensors/threshold/update
+Content-Type: application/json
+
+{
+      "macID":"gourav_sensor_3_ranjit_3",
+       "threshold":{
+             "start":"summery",
+             "date":"203040"
+       }
+}
+
+### UNDER THE GATEWAY SENSOR LIST
+POST http://localhost:4000/sensors/gatewayUnderSensor
+Content-Type: application/json
+
+{
+      "gatewayMacId":"67436574gfhdgfIBM"
+}

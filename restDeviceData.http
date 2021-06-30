@@ -1,0 +1,30 @@
+### find all device data
+GET http://localhost:4000/DeviceData
+Content-Type: application/json
+
+
+
+### find data through sensor mac Id
+POST http://localhost:4000/DeviceData/getDataSensor
+Content-Type: application/json
+
+{
+    "Sensor_MAC_ID":"f840663265d2"
+}
+
+### find device message particuler time period
+
+POST http://localhost:4000/DeviceData/graphTime
+Content-Type: application/json
+
+{
+    "sensorMacId":"cb090a4729f8",
+     "startTime":"05/06/21",
+      "EndTime":"6/18/21"
+}
+
+
+
+
+
+

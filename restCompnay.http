@@ -1,0 +1,121 @@
+### register company
+POST http://localhost:4000/companies/create
+Content-Type: application/json
+
+{
+     "email":"iprn675@gmail.com",
+      "location":"bbsr",
+      "password":"iprn675@gmail.com",
+      "name":"ranjit",
+      "uid":"ranjit010101"
+}
+### Admin register company
+POST http://localhost:4000/companies/adminCreate
+Content-Type: application/json
+
+{
+     "email":"iprn675@gmail.com",
+      "location":"bbsr",
+      "password":"iprn675@gmail.com",
+      "name":"iprn"
+}
+
+
+
+### find all company
+GET http://localhost:4000/companies
+
+### find device through uid
+GET http://localhost:4000/companies/ranjit@519@7
+Content-Type: application/json
+
+### find sensors through gatewayMacId
+POST http://localhost:4000/companies/findGateway
+Content-Type: application/json
+
+{
+      "gatewayMacId":"Bbsr54"
+}
+
+### accepte company
+POST http://localhost:4000/companies/accept
+Content-Type: application/json
+
+{
+      "uid":"ranjit@519@7"
+}
+### get all requested company
+GET http://localhost:4000/companies/requested
+Content-Type: application/json
+
+### get all exited company
+GET http://localhost:4000/companies/exitCompany
+Content-Type: application/json
+
+### find gateway through company uid
+POST http://localhost:4000/companies/findGatewayCompany
+Content-Type: application/json
+
+{
+      "uid":"qEDz5ZTB19alj93xmDZTx4avHyd2"
+}
+
+### get sensor details through gateway mac id and uid
+POST http://localhost:4000/companies/findSensorsCompany/gateway
+Content-Type: application/json
+
+{
+      "uid":"90ioieow34789237",
+      "gatewayMacId":"Bbsr54"
+}
+
+### delete company
+DELETE http://localhost:4000/companies/remove
+Content-Type: application/json
+
+{
+      "uid":"ranjit@519@7"
+}
+
+### delete company if have gatway and sensor
+DELETE http://localhost:4000/companies/delete
+Content-Type: application/json
+
+{
+      "uid":"qxlQZNCrC2N1DSQMzurYjjsxL442"
+}
+
+
+
+### Asshin Device and sensor   https://vdeal-api.herokuapp.com/companies/updateDevice  MbW3YpGHRFbUSVouXrAQpizcp3G3  http://localhost:4000/companies/updateDevice
+POST https://vdeal-api.herokuapp.com/companies/updateDevice
+Content-Type: application/json
+
+{
+      
+      "companyUid":"K5amwIAoOfYpsHFjH00IM4dVB1w1",
+      "gatewayMacId":"huron macid",
+      "sensorMacId":"huron 2020",
+      "dataConfig":{
+            "SPEED":"640"
+      }
+}
+### update gatway device verify data   gourav_sensor_3_ranjit_3  gourav_sensor_3_ranjit_3lli
+
+PUT http://localhost:4000/companies/verifyGateway
+Content-Type: application/json
+
+{
+      "companyUid":"ToTVanpJMVX5QkA4npu0kGlEcec2",
+       "gatewayMacId":"Gnfgnprts:67",
+       "sensorMacId":"gourav_sensor_3_ranjit_3lli"
+}
+
+### update support
+PUT http://localhost:4000/companies/UpdateSupport
+Content-Type: application/json
+
+{
+      "uid": "24LQfHHHoDb8XII32I6gNDabSQI2",
+      "support":"this is the support statement."
+}

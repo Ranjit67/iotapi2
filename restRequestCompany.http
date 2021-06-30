@@ -1,0 +1,28 @@
+### register request company
+POST http://localhost:4000/requested-companies/create
+Content-Type: application/json
+
+{
+    "email":"check@email.com2", 
+    "location":"location trace", 
+    "name":"name of the request companey", 
+    "password":"123456",
+    "uid":"uid3564236"
+}
+
+### delete data from reqest companey list
+DELETE http://localhost:4000/requested-companies/deleteRequestCompany
+Content-Type: application/json
+
+{
+    "uid":"uid3564236"
+}
+
+### see All RequestED Company
+GET http://localhost:4000/requested-companies
+Content-Type: application/json
+
+### get requested company through uid
+GET http://localhost:4000/requested-companies/uid3564236
+Content-Type: application/json
+

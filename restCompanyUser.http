@@ -1,0 +1,57 @@
+### register company
+POST http://localhost:4000/companyUser/create
+Content-Type: application/json
+
+{
+    "email":"iprn675@gmail.com", 
+    "password":"mnprtsy12",
+    "companyUid":"sE13P5FepeTJWITIrmBrHEdbOto2"
+}
+
+
+### find all user under the company
+POST http://localhost:4000/companyUser/findUserCompany
+Content-Type: application/json
+
+{
+    "companyUid":"q9jSkTEYkFaCISVwwnjqf9f04tH3"
+}
+
+
+
+### find all user under the company
+POST http://localhost:4000/companyUser/gatewayAssign
+Content-Type: application/json
+
+{
+    "gatewayMacId":"mmmmm2345", 
+    "companyUid":"ranjit@5190000@7",
+     "userUid":"xqzsMwoNMAYSOaVErdAvyLgXV9o1"
+}
+
+###   listGatewayUser
+POST http://localhost:4000/companyUser/listGatewayUser
+Content-Type: application/json
+
+{
+    "userUid":"8wO1lYKpbSMS8CydiJFTfK9Rt1t2"
+}
+
+### removeGatewayCompany
+POST http://localhost:4000/companyUser/removeGatewayCompany
+Content-Type: application/json
+
+{
+    "gatewayMacId":"mmmmm2345", 
+    "companyUid":"ranjit@5190000@7",
+     "userUid":"xqzsMwoNMAYSOaVErdAvyLgXV9o1"
+}
+
+### DELETE COMPANY USER BY COMPANY
+
+DELETE http://localhost:4000/companyUser/deleteCompanyUser
+Content-Type: application/json
+
+{
+    "companyUserUid":"xqzsMwoNMAYSOaVErdAvyLgXV9o1"
+}

@@ -1,0 +1,3 @@
+### get healthParameter through sensor mac id
+GET http://localhost:4000/healthParameterData/ED:DB:9D:26:B1:6C
+Content-Type: application/json 

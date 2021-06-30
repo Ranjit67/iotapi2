@@ -1,0 +1,49 @@
+### create modify sensor
+post http://localhost:4000/sensors/create
+Content-Type: application/json
+
+{
+     "macID":"tnp:12:45:32",
+      "sensorName":"ssl",
+      "sensorData":{
+          "volt":"34"
+      },
+      "threshold":{
+          "jnp":"340"
+      }
+}
+
+### get ALL sensor
+GET http://localhost:4000/sensors/
+Content-Type: application/json
+
+### get data through sensor mac id
+GET http://localhost:4000/sensors/tnp:12:45:32
+Content-Type: application/json
+
+### update threshold in sensor
+PUT http://localhost:4000/sensors/threshold/update
+Content-Type: application/json
+
+{
+    "macID":"tnp:12:45:32",
+     "threshold":{
+         "data":"save data",
+         "sensor":"sensor data23"
+     }
+}
+### update threshold in sensor
+POST http://localhost:4000/sensors/sensorCompany
+Content-Type: application/json
+
+{
+    "uid":"rGyV5f7KuJOJYeb1wx2nnQYQ1Zh1"
+}
+
+### DELETE DATA
+POST http://localhost:4000/modifySensor/delete
+Content-Type: application/json
+
+{
+    "sensorMacId":"tnp:12:45:32"
+}

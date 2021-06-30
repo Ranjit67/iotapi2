@@ -1,0 +1,36 @@
+### user
+post http://localhost:4000/users/create
+Content-Type: application/json
+
+{
+      "creationTime":"creation time2",
+      "displayName":"display name",
+      "email":"email",
+      "lastSignTime":"last sIGN IN",
+      "phoneNumber":"64723847823",
+      "photoURL":"sghdjsdgfhjsdg",
+      "role":"Head",
+      "signInProvider":"Sign in provider",
+      "uid":"4623466235sfgdgf"
+}
+
+### update
+PATCH http://localhost:4000/users/userUpdate
+Content-Type: application/json
+
+{
+    "uid":"xvhBThJhNBWo5ZYote5AQ443GSN2",
+      "role":"B2C"
+}
+
+
+### find one user through params in uid
+GET  http://localhost:4000/users/VXgwVqQZj5VTePZbsAuZKwbZfYn2
+Content-Type: application/json
+
+
+
+### find all user
+
+GET http://localhost:4000/users
+Content-Type: application/json

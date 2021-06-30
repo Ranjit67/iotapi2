@@ -1,0 +1,15 @@
+### add parameter
+POST http://localhost:4000/parameter/create
+Content-Type: application/json
+
+{
+    "name":"velocity",
+     "objectData":{
+         "SPEED":"30",
+         "data":"meta data"
+     }
+}
+
+### find all
+GET http://localhost:4000/parameter
+Content-Type: application/json

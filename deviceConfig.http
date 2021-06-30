@@ -1,0 +1,23 @@
+### insert 
+POST http://localhost:4000/deviceConfig/create
+Content-Type: application/json
+
+{
+     "sensorMacId":"5712376jhdfhdjranjit2",
+  "companyUid": "ranjit@519@7",
+  "dataConfig": {
+    "data":"ranjit",
+    "c":"780"
+  }
+}
+### get all data through company uuid
+GET http://localhost:4000/deviceConfig/gOvGj8xTTYQcj7HCHmlP4bdSxgb2
+
+### find device config data through sensor mac id
+POST http://localhost:4000/deviceConfig/findSensor
+Content-Type: application/json
+
+{
+    "uid":"qEDz5ZTB19alj93xmDZTx4avHyd2",
+     "sensorMacId":"5defc5aa1ae8"
+}

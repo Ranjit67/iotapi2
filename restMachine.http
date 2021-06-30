@@ -1,0 +1,15 @@
+### register machine
+POST http://localhost:4000/machines/create
+Content-Type: application/json
+
+{
+        "machineType":"mechine type insert"
+}
+
+### find All Machine
+GET http://localhost:4000/machines
+Content-Type: application/json
+
+### find data through mechine id
+GET http://localhost:4000/machines/60753a347ddf782650ef43e9
+Content-Type: application/json

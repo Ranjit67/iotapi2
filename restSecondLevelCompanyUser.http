@@ -1,0 +1,54 @@
+### second level user create
+POST http://localhost:4000/secondLevelUser/create
+Content-Type: application/json
+
+{
+    "email":"LLL1230012@gmail.com",
+     "password":"LL12300@gmail.com",
+      "userUid":"2R6lT04U4hTdxewsCRmfrxnzMds1"
+}
+### viewAllUserUnderFirstUser
+### view all users list under first company user
+POST http://localhost:4000/secondLevelUser/viewAllUserUnderFirstUser
+Content-Type: application/json
+
+{
+    "firstUserUid":"8wO1lYKpbSMS8CydiJFTfK9Rt1t2"
+}
+
+
+### gateway assign to thired user
+POST http://localhost:4000/secondLevelUser/listGatewayUser
+Content-Type: application/json
+
+{
+    "secondLevelUserUid":"b1hvJFcpW0XypDzJP8ugGxqAf3c2"
+}
+
+### gateway assign
+POST http://localhost:4000/secondLevelUser/assignGateway
+Content-Type: application/json
+
+{
+    "gatewayMacId":"mmmmm234", 
+    "userUid":"xqzsMwoNMAYSOaVErdAvyLgXV9o1", 
+    "secondLevelUserUid":"zQeAyd1Ha4Z0NVAw4FF1Ac6dnQ32"
+}
+### remove gateway from user
+POST http://localhost:4000/secondLevelUser/removegatewaysecondlevel
+Content-Type: application/json
+
+{
+   "gatewayMacId":"mmmmm234", 
+    "userUid":"xqzsMwoNMAYSOaVErdAvyLgXV9o1", 
+    "secondLevelUserUid":"zQeAyd1Ha4Z0NVAw4FF1Ac6dnQ32"
+}
+
+### delete second level user by company user
+
+DELETE http://localhost:4000/secondLevelUser/deleteSecondLevelUser
+Content-Type: application/json
+
+{
+    "secondLevelUserUid":"zQeAyd1Ha4Z0NVAw4FF1Ac6dnQ32"
+}

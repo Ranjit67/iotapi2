@@ -1,0 +1,45 @@
+### find all data from device
+GET http://localhost:4000/devices
+Content-Type: application/json
+
+
+### insert
+POST http://localhost:4000/devices/dataInsert
+Content-Type: application/json
+
+{
+    "COMPANY_NAME":"VDEALsystem1",
+    "POLES":"1500",
+    "TIME":"04/10/21 18:08:20",
+    "TYPE":"VSPL",
+    "EVENT":"0",
+    "X":"-2,0,-6,8,-16,-2,-16,-2,-16,-10,16,-22,10,-12,-2,0,-18,-2,-2,0,0,-24,-16,-2,0,-18,-18,0,0,-14,-14,-22,4,2,-18,-8,-16,-2,4,-18,0,-20,-4,0,-18,0,0,-2,0,-6,0,-18,2,-22,-6,0,-18,0,0,10,0,-18,2,-18,",
+    "Y":"16,0,10,16,-6,14,0,4,-20,10,2,-2,6,0,6,8,-2,8,-4,-2,2,0,0,-16,-2,-4,-14,-14,12,4,-2,-10,4,8,-2,16,-18,-2,8,-2,8,0,16,0,-6,12,-14,0,0,6,0,-2,12,-14,16,0,-2,12,-10,-2,0,18,2,-2,","Z":"272,222,264,240,254,264,238,272,246,268,242,256,256,250,260,234,254,258,242,234,254,254,262,256,236,244,244,238,242,266,256,248,230,224,252,258,238,256,232,254,264,250,260,234,264,248,242,272,238,264,226,270,256,254,268,238,254,256,246,264,230,260,242,248,",
+    "TEMP":"27",
+    "Sensor_MAC_ID":"26a9ecf2a9f43",
+    "Gateway_MAC_ID":"40:f5:20:6e:b8:20"
+ }
+
+ 
+### get data through sensor mac id
+GET http://localhost:4000/devices/5c76df36e1c2
+Content-Type: application/json
+
+### find devices through sensor mac id
+POST http://localhost:4000/devices/5c76df36e1c2
+
+### find device message particuler time period
+
+POST http://localhost:4000/devices/graphTime
+Content-Type: application/json
+
+{
+    "sensorMacId":"5defc5aa1ae8",
+     "startTime":"04/14/21",
+      "EndTime":"04/16/21"
+}
+
+
+
+
+
