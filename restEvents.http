@@ -1,0 +1,3 @@
+### get events through sensor mac id
+GET http://localhost:4000/eventsData/ED:DB:9D:26:B1:6C
+Content-Type: application/json 

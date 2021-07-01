@@ -71,6 +71,8 @@ const Mail = require("./route/mail");
 app.use("/mail", Mail);
 const DeviceData = require("./route/deviceData");
 app.use("/DeviceData", DeviceData);
+const eventsData = require("./route/events");
+app.use("/eventsData", eventsData);
 const heathParameterData = require("./route/healthParameter");
 app.use("/healthParameterData", heathParameterData);
 //company user
